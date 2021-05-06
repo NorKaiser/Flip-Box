@@ -1,9 +1,13 @@
 const config = {
     type: Phaser.AUTO,
-    width: 540,
-    height: 960,
+    scale: {
+        mode: Phaser.Scale.FIT,
+        parent: 'app',
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: this.innerWidth,
+        height: this.innerHeight,
+    },
     pixelArt: true,
-    parent: 'app',
     scene: [MainGame]
 }
 const game = new Phaser.Game(config);
